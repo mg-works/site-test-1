@@ -1,0 +1,416 @@
+/*
+    Attention
+    .mobile-language use float: right; with no clearfix
+*/
+
+:root {
+    --language: rgb(174, 186, 238);
+    --nav-background: #333;
+    --nav-background-hoover: #555;
+    --nav-text: #FFFFFF;
+    --nav-text-hoover: rgba(179, 166, 166, 0.87);
+    --body-text-red: red; /* Put the same as logo */
+    --text-a: #FFFFFF;
+    --section-services-text: #FFFFFF;
+    --section-text: rgb(0, 0, 0);
+    --section-products-background: #FFFFFF;
+    --aboutus-findus-box: #FFFFFF;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+@font-face {
+    font-family: 'Open Sans', sans-serif;
+    src: url("fonts/OpenSans-Regular.ttf") format("truetype");
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    width: 100%;
+}
+
+h2 {
+    color: var(--section-text);
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: lighter;
+    padding-top: 3rem;
+    padding-bottom: 1.2rem;
+}
+
+.section-services-htwo {
+    color: var(--section-services-text);
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: lighter;
+    padding-top: 3rem;
+    padding-bottom: 1.2rem;
+}
+
+/* hr is problematic between browser, this way work in Firefox and Chrome */
+hr {
+    width: 2.5rem;
+    color: var(--section-text);
+    background: var(--section-text);
+    background-color: var(--section-text);
+    border-top: 1px solid var(--section-text);
+    margin: 0.6rem auto 1.2rem auto;
+    height: 3px;
+    border: 0px;
+}
+
+.section-services-hr {
+    width: 2.5rem;
+    color: var(--section-services-text);
+    background:var(--section-services-text);
+    background-color: var(--section-services-text);
+    border-top: 1px solid var(--section-services-text);
+    margin: auto;
+    height: 3px;
+    border: 0px;
+}
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* Page wrappers */
+.wrapper {
+    max-width: 1380px;
+    margin: auto;
+}
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* Top nav bar */
+#nav-regular {
+    background: var(--nav-background);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 50px;
+}
+
+#nav-regular ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    font-size: 1.1rem;
+    font-weight: 100;
+}
+
+#nav-regular a {
+    text-decoration: none;
+    text-align: center;
+    color: var(--nav-text);
+    display: block;
+    padding: 12px;
+}
+
+#nav-regular a:hover {
+    color: var(--nav-text-hoover);
+    background-color: var(--nav-background-hoover);
+}
+
+#nav-regular .language {
+    color: var(--language);
+    font-size: 0.8rem;
+}
+
+#nav-hamburger {
+    width: 100%;
+    background: var(--nav-background);
+}
+
+/* Hide Hamburger */
+#nav-hamburger, #nav-hamburger label, #hamburger {
+    display: none;
+}
+
+#nav-hamburger ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    font-size: 1.1rem;
+    font-weight: 100;
+}
+
+#nav-hamburger a {
+    text-decoration: none;
+    text-align: center;
+    color: var(--nav-text);
+    display: block;
+    padding: 12px;
+}
+
+#nav-hamburger a:hover {
+    color: var(--nav-text-hoover);
+    background-color: var(--nav-background-hoover);
+}
+
+.mobile-language {
+    text-decoration: none;
+    color: var(--language);
+    font-size: 1rem;
+    float: right;
+} 
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* Section show-off */
+.show-off-section {
+    height: 1000px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/shop.jpg);
+    background-size: cover;
+    width: 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.show-off-box {
+    height: 700px;
+    width: 100%;
+}
+
+.show-off-co-name {
+    color: var(--body-text-red);
+    padding-top: 50px;
+    font-size: 4rem;
+    font-weight: bolder;
+}
+
+.show-off-text {
+    color: var(--text-a);
+    font-size: 2rem;
+    font-weight: bolder;
+    padding-top: 2rem;
+}
+
+.show-off-box-social {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 200px;
+    width: 100%;
+}
+
+.show-off-box-social img {
+    padding: 0 40px;
+}
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* Section services */
+.services-section {
+    background-image: url(../img/services-background-gray-sand.png);
+    height: 700px;
+    text-align: center;
+    width: 100%;
+}
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* Section products */
+.products-section {
+    background-color: var(--section-products-background);
+    height: 500px;
+    text-align: center;
+    width: 100%;
+}
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* Section aboutus */
+.aboutus-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/aboutus-findus-background.png);
+    height: 700px;
+    text-align: center;
+    width: 100%;
+}
+
+.aboutus-text {
+    margin: 1rem;
+}
+
+.aboutus-box {
+    background-color: var(--aboutus-findus-box);
+    width: 650px;
+    height: 600px;
+}
+
+.aboutus-pic-section {
+    height: 400px;
+    background-image: url(../img/aboutus-pic-1348x448.png);
+    background-size: cover;
+    width: 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* Section findus */
+.findus-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/aboutus-findus-background.png);
+    text-align: center;
+    height: 700px;
+    width: 100%;
+}
+
+.findus-box {
+    background-color: var(--aboutus-findus-box);
+    width: 650px;
+    height: 600px;
+}
+
+.findus-address-hours-writeus-box {
+    display: flex;
+    /* border: 2px solid red; */
+}
+
+.findus-address-hours-box {
+    /* border: 2px solid green; */
+    height: 400px;
+    width: 280px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.address {
+    margin-left: 40px;
+    text-align: left;
+}
+
+.hours {
+    margin-left: 40px;
+    text-align: left;
+}
+
+.open-hours {
+    text-transform: uppercase;
+}
+
+.findus-writeus-box {
+    text-align: left;
+    /* border: 2px solid yellow; */
+    height: 400px;
+    width: 320px;
+    margin: 0 auto;
+}
+
+input[type=text], [type=email], textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #000000;
+    margin: 8px 0;
+    resize: none;
+}
+
+textarea {
+    height: 118px;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: var(--nav-background);
+    color: var(--nav-text);
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+}
+  
+input[type=submit]:hover {
+    background-color: var(--nav-background-hoover);
+}
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* Section footer */
+footer {
+    background-color: var(--nav-background);
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.footer-social img {
+    width: 35px;
+    height: 35px;
+}
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* Responsive */
+@media screen and (max-width: 1199px) {
+    /*
+    Services, Products and about us pic will have to be setup correctly
+    */
+}
+
+@media screen and (max-width: 960px) {
+    #nav-regular {
+        display: none;
+    }
+
+    #nav-hamburger {
+        display: inherit;
+    }
+
+    /* Show Hamburger */
+    #nav-hamburger label {
+        display: inline;
+        color: var(--nav-text);
+        font-size: 2rem;
+        padding: 10px;
+    }
+
+    /* Toggle show/hide menu on checkbox click */
+    #nav-hamburger ul {
+        display: none;
+    }
+
+    #nav-hamburger input:checked ~ ul {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .findus-section{
+        height: 1000px;
+    }
+
+    .findus-box{
+        height: 850px;
+    }
+
+    .findus-address-hours-writeus-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 650px;
+    }
+
+    .findus-address-hours-box {
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .aboutus-box {
+        width: 100%;
+    }
+
+    .findus-box {
+        width: 100%;
+    }
+}
